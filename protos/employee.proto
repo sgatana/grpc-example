@@ -1,0 +1,17 @@
+syntax = "proto3";
+package employee;
+
+service EmployeeService {
+  rpc GetEmployee(EmployeeRequest) returns (Employee){}
+}
+
+message EmployeeRequest {
+  int32 id = 1;
+}
+
+message Employee {
+  string name = 1;
+  int32 employeeId = 2;
+  float requestedDays = 3;
+  float accruedDays = 4;
+}
